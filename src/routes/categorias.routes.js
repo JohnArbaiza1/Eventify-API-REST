@@ -11,6 +11,6 @@ const router = Router();
 
 //Configuramos las rutas
 router.get('/categorias',getCategorias);
-router.get('/categorias/:id', getCategoria);
+router.get('/categorias/:idCategoria', getCategoria);
 
 export default router;
