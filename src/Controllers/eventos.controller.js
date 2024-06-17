@@ -1,4 +1,4 @@
-//Controladores de la API REST
+//Controladores de la API REST para los eventos
 
 //Controlador encargado de mostrar los datos de los eventos
 export const getEventos = async(req,res) =>{
