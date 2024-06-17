@@ -15,10 +15,10 @@ const router = Router();
 
 //Configuramos las rutas
 router.get('/Eventos',getEventos);
-router.get('/Eventos/:id', getEvento);
+router.get('/Eventos/:idEvento', getEvento);
 router.post('/Eventos', createEvento);
-router.patch('/Eventos/:id', updateEvento);
-router.delete('/Eventos/:id', deleteEvento);
+router.patch('/Eventos/:idEvento', updateEvento);
+router.delete('/Eventos/:idEvento', deleteEvento);
 
 //Exportamos el enroutador
 export default router;
