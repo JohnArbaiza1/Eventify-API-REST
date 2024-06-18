@@ -6,8 +6,8 @@ import { pool } from "../db/db.js";
 //Controlador encargado de mostrar evento segun el usuario que lo creo
 export const getUserEvento = async (req, res) => {
     try {
-        const userId = req.params.idUsuario;
-        const eventos = await pool.query('SELECT * FROM Eventos WHERE idUsuario = ?', [userId]);
+        //const userId = req.params.idUsuario;
+        const eventos = await pool.query('SELECT * FROM eventos WHERE idUsuario = ?', [req.params.idUsuario]);
        
         if (eventos.length > 0) {
             // Mostramos los eventos que esten asociados a este usuario
