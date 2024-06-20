@@ -40,7 +40,7 @@ export const getUserEvent = async (req, res) => {
     }
 };
 
-//Controlador encargado de actualizar segun el uduario
+//Controlador encargado de actualizar segun el uid del usuario y el id del evento
 export const updateEventoUser = async(req,res) =>{
     //Extraemos el valor de los siguientes parámetros
     const {idUsuario,idEvento} = req.params;
@@ -66,6 +66,24 @@ export const updateEventoUser = async(req,res) =>{
         console.log(error);
     }
 };
+
+//Contolador encargado de eliminar segun el uid del user y el idEvento
+export const deleteUserEvent = async(req, res) =>{
+    try {
+        const [results] = await pool.query('DELETE FROM eventos WHERE idUsuario =? AND idEvento = ?', [req.params.idUsuario, req.params.idEvento]);
+        if(results.affectedRows <= 0)return res.status(404).json({
+            message: 'Eventos not found'
+        });
+        res.sendStatus(204);
+        
+    } catch (error) {
+        res.status(500).json({
+             message: 'Algo salio mal'
+        });
+    }
+}
+
+
 
 
 

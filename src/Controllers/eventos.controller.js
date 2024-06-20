@@ -76,7 +76,6 @@ export const createEvento = async(req,res) =>{
         res.status(500).json({
             message: 'Algo salio mal'
         })
-        console.log(error);
     }
 };
 
