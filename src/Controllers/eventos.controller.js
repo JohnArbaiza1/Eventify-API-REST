@@ -10,22 +10,22 @@ export const getEventos = async(req,res) =>{
         const [rows] = await pool.query('SELECT * FROM eventos');
         //--------------------------------------------------------
         //En esta seccion de codigo formateamos la fecha
-        const fechaFormateada = rows.map(evento =>{
-            // Extraemos el valor de la columna “Fecha”
-            const fechaISO = evento.Fecha
-            //Creamos un objeto de fecha a partir de la cadena de fecha en formato ISO
-            const fechaObjeto = new Date(fechaISO);
-            // Definimos las opciones para formatear la fecha
-            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
-            //Formateamos según las opciones especificadas
-            const fechaFormateada = fechaObjeto.toLocaleDateString(undefined, opciones);
-            return {
-                ...evento,
-                Fecha: fechaFormateada
-            };
-        });
+        // const fechaFormateada = rows.map(evento =>{
+        //     // Extraemos el valor de la columna “Fecha”
+        //     const fechaISO = evento.Fecha
+        //     //Creamos un objeto de fecha a partir de la cadena de fecha en formato ISO
+        //     const fechaObjeto = new Date(fechaISO);
+        //     // Definimos las opciones para formatear la fecha
+        //     const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+        //     //Formateamos según las opciones especificadas
+        //     const fechaFormateada = fechaObjeto.toLocaleDateString(undefined, opciones);
+        //     return {
+        //         ...evento,
+        //         Fecha: fechaFormateada
+        //     };
+        // });
         //------------------------------------------------------------
-        res.json(fechaFormateada);
+        res.json(rows[0]);
         
     } catch (error) {
         res.status(500).json({
