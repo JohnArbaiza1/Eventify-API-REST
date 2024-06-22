@@ -25,7 +25,7 @@ export const getEventos = async(req,res) =>{
         //     };
         // });
         //------------------------------------------------------------
-        res.json(rows[0]);
+        res.json(rows);
         
     } catch (error) {
         res.status(500).json({
