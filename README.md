@@ -1,5 +1,5 @@
-# Eventify-API-REST
-API REST del proyecto Eventify
+# Eventify REST API 
+El presente repositorio contiene la  API REST del proyecto Eventify, en dicha API se manejan las categorías y Eventos que son consumidas en la aplicación móvil. desarrollada en Android Studio.
 
 ## Requisitos 📋
 Para poder ejecutar el proyecto sin ningún problema es necesario seguir los siguientes pasos:
