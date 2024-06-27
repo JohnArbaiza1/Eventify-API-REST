@@ -53,3 +53,5 @@ https://github.com/JohnArbaiza1/Eventify-App.git
 * John Elvis Arbaiza Velásquez  <a href="https://github.com/JohnArbaiza1" >JohnArbaiza1 </a>
 * Erick Adony López Meléndez <a href="https://github.com/lm21009UES" > lm21009UES </a>
 * Luis Emilio González Molina <a href="https://github.com/gnz-e" >gnz-e </a>
+
+## Proyecto realizado con fines educativos  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" alt="Graduation Cap" width="25" height="25" />
